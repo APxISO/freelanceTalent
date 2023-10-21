@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+# Freelance Talent Management App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Goal:
 
-## Available Scripts
+This project is a MERN stack application designed to manage freelance talent vendors. Talent can register, log in, and submit their data for approval and receive communication from an Admin. An Admin can log in, view these submissions, and either approve or deny them. The system acts as a CRM where communication between the admin and talent is facilitated.
 
-In the project directory, you can run:
+## Structure:
 
-### `npm start`
+### Frontend:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- React: Manages the UI and state.
+- Redux/Context API: For state management.
+- React-router: For routing and navigation.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Backend:
 
-### `npm test`
+- Express & Node.js: Handle the backend operations.
+- JWT: For authentication.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Database:
 
-### `npm run build`
+- MongoDB: To store talent and admin data.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## How It Works:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Talents:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Register & Login.
+- Submit their details.
+- Await approval from the admin.
 
-### `npm run eject`
+### Admin:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Log in.
+- View all talent submissions.
+- Approve or deny submissions.
+- Communicate with talents.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Why this project:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The purpose of this project is to furhter develop my skills as a full stack developer, continue learning, and implement the MERN stack (I've never used Mongo DB before). Furthermore, the purpose of this app is to streamline the process of managing freelance talents. It offers a simple way for freelance talents to register and submit their data. For administrators, it provides a straightforward platform to view, manage, and communicate with these talents.
