@@ -1,14 +1,15 @@
 import React from 'react'
 import { Container, Row, Col, Form, Button } from 'react-bootstrap'
+import PropTypes from 'prop-types';
 
-export const LoginForm = ({handleOnChange, email, password}) => {
+export const LoginForm = ({handleOnChange, handleOnSubmit, email, password}) => {
   return (
     <Container>
         <Row>
             <Col>
                 <h1 className='text-info text-center'>Login</h1>
                 <hr/>
-                <Form>
+                <Form autoComplete='off' onSubmit={handleOnSubmit}>
                     <Form.Group>
                         <Form.Label>Email Address</Form.Label>
                         <Form.Control
@@ -18,6 +19,7 @@ export const LoginForm = ({handleOnChange, email, password}) => {
                         onChange={handleOnChange}
                         placeholder='Enter Email'
                         required
+                        
                         />
                     </Form.Group>
                     <br/>
@@ -45,4 +47,11 @@ export const LoginForm = ({handleOnChange, email, password}) => {
         </Row>
     </Container>
   )
+}
+
+LoginForm.propTypes ={
+    handleOnChange: PropTypes.func.isRequired,
+    handleOnSubmit: PropTypes.func.isRequired,
+    email: PropTypes.string.isRequired,
+    password: PropTypes.string.isRequired
 }
