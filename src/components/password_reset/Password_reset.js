@@ -2,14 +2,14 @@ import React from 'react'
 import { Container, Row, Col, Form, Button } from 'react-bootstrap'
 import PropTypes from 'prop-types';
 
-export const LoginForm = ({handleOnChange, handleOnSubmit, formSwitcher, email, password}) => {
+export const ResetPassword = ({handleOnChange, handleOnResetSubmit, formSwitcher, email}) => {
   return (
     <Container>
         <Row>
             <Col>
-                <h1 className='text-info text-center'>Login</h1>
+                <h1 className='text-info text-center'>Reset Password</h1>
                 <hr/>
-                <Form autoComplete='off' onSubmit={handleOnSubmit}>
+                <Form autoComplete='off' onSubmit={handleOnResetSubmit}>
                     <Form.Group>
                         <Form.Label>Email Address</Form.Label>
                         <Form.Control
@@ -23,36 +23,26 @@ export const LoginForm = ({handleOnChange, handleOnSubmit, formSwitcher, email, 
                         />
                     </Form.Group>
                     <br/>
-                    <Form.Group>
-                        <Form.Label>Password</Form.Label>
-                        <Form.Control
-                        type='password'
-                        name='password'
-                        value={password}
-                        onChange={handleOnChange}
-                        placeholder='Password'
-                        required
-                        />
-                    </Form.Group>
-                    <br/>
-                    <Button type='submit'>Login</Button>
+                    
+                    
+                    <Button type='submit'>Reset Password</Button>
                     <hr/>
                 </Form>
             </Col>
         </Row>
         <Row>
             <Col>
-            <a href='#!' onClick={() => formSwitcher('reset')}>Forgot Password?</a>  
+            <a href='#!'onClick={() => formSwitcher('login')}>Already have a login? Click here.</a>  
             </Col>
         </Row>
     </Container>
   )
 }
 
-LoginForm.propTypes ={
+ResetPassword.propTypes ={
     handleOnChange: PropTypes.func.isRequired,
-    handleOnSubmit: PropTypes.func.isRequired,
+    handleOnResetSubmit: PropTypes.func.isRequired,
     formSwitcher: PropTypes.func.isRequired,
     email: PropTypes.string.isRequired,
-    password: PropTypes.string.isRequired
+    
 }
