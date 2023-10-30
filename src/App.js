@@ -1,13 +1,13 @@
 
+import React from 'react';
 import './App.css';
-
-import { Button } from 'react-bootstrap';
-import { Login } from './pages/login/Login';
+import { DefaultLayout } from './layout/DefaultLayout';
 
 function App() {
   return (
     <div className="App">
-      <Login/>
+      {/* <Login/> */}
+      <DefaultLayout>//Dashboard</DefaultLayout>
     </div>
   );
 }
