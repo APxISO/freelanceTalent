@@ -5,9 +5,9 @@ import { Footer } from './partials/Footer'
 export const DefaultLayout = ({ children }) => {
   return (
     <div className="default-layout">
-      <header className="header mb-2">
+      <Header className="header mb-2">
         <Header />
-      </header>
+      </Header>
 
       <main className="main">{children}</main>
 
