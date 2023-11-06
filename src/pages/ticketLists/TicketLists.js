@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState} from 'react'
 import {Container, Row, Col, Button} from 'react-bootstrap';
 import { PageBreadcrumbs } from '../../components/breadcrumbs/Breadcrumbs'
 import { SearchForm } from '../../components/searchForm/SearchForm';
@@ -7,12 +7,22 @@ import tickets from '../../assets/data/dummy_data.json';
 
 export const TicketLists = () => {
   const [str, setStr] = useState('')
-  useEffect(() => {}, [str])
-  
+  const [dispTicket, setDispTicket] = useState(tickets)
+
 
   const handleOnChange = e =>{
-    setStr(e.target.value)
+    const {value} = e.target
+    console.log(value)
+    setStr(value)
+    searchTicket(value)
   }
+
+  const searchTicket = str => {
+    
+    const displayTickets = tickets.filter(row=> row.subject.toLowerCase().includes(str.toLowerCase())) 
+    setDispTicket(displayTickets);
+  }
+
 
     return (
     <Container>
@@ -35,7 +45,7 @@ export const TicketLists = () => {
         <hr/>
         <Row>
             <Col>
-            <TicketTable tickets={tickets}/>
+            <TicketTable tickets={dispTicket}/>
             </Col>
         </Row>
     </Container>
