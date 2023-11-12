@@ -1,5 +1,6 @@
 import React, { useState} from 'react'
 import {Container, Row, Col, Button} from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import { PageBreadcrumbs } from '../../components/breadcrumbs/Breadcrumbs'
 import { SearchForm } from '../../components/searchForm/SearchForm';
 import { TicketTable } from '../../components/ticketTable/TicketTable';
@@ -34,7 +35,9 @@ export const TicketLists = () => {
 
         <Row className='mt-4'>
             <Col>
+            <Link to='/newTicket'>
             <Button variant='info'>Add New Ticket</Button>
+            </Link>
             </Col>
             <Col className='text-right'>
             <SearchForm 

@@ -55,7 +55,7 @@ export const AddTicketForm = ({handleOnSubmit, handleOnChange, formData}) => {
         </Form.Group>
         <div className="d-grid gap-2 m-3 mt-3">
         <Button  type="submit" variant="info" size="lg">
-          Open Ticket
+          Submit Ticket
         </Button>
         </div>
       </Form>
